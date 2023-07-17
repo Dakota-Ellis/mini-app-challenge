@@ -20,4 +20,11 @@ app.get('/movies', (req, res) => {
 
 })
 
+app.get('/movies/movie', (req, res) => {
+  indMovie = []
+  movies.map(movie => {
+    indMovie.push(movie.title)
+  })
+  res.send(indMovie)
+})
 app.listen(port, () => console.log(`Listening at ${port}`))
